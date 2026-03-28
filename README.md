@@ -102,7 +102,7 @@ npm run dev
 Coming soon...
 
 ## 👨‍💻 Author
-Your Name - [GitHub](https://github.com/Aditya02678)
+[GitHub](https://github.com/Aditya02678)
 
 ## 📄 License
 MIT License
