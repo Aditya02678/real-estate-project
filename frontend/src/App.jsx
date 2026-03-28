@@ -1,0 +1,82 @@
+import React, { useState } from 'react'
+import{BrowserRouter,Routes,Route} from "react-router-dom"
+import {Suspense} from 'react'
+import Home from "./pages/Home"
+
+
+import Layout from './components/Layout'
+
+import Favourites from './pages/Favourites'
+import Bookings from './pages/Bookings'
+import Listing from './pages/Listing'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import UserDetailContext from './context/UserDetailContext'
+import Property from './pages/property'
+
+const App=()=>{
+
+  const queryClient = new QueryClient()
+
+
+    const [userDetails,setUserDetails] =useState({
+     favourites:[],
+    
+     bookings:[],
+     
+     token:null
+
+
+
+    })
+
+
+  return(
+
+<UserDetailContext.Provider value={{userDetails,setUserDetails}}>
+
+
+
+
+
+<QueryClientProvider client={queryClient}>
+<BrowserRouter>
+
+<Suspense fallback={<div>Loading...</div>}>
+<Routes>
+
+<Route element={<Layout/>} >
+<Route path='/' element={<Home/>}/>
+<Route path='/listing' >
+<Route index element={<Listing/>}/>
+<Route path=':propertyId'element={<Property/>}/>
+
+</Route>
+
+
+<Route path ='/bookings' element ={<Bookings/>}/>
+<Route path ='/favourites' element ={<Favourites/>}/>
+</Route>
+
+
+
+</Routes>
+
+
+</Suspense>
+
+</BrowserRouter>  
+
+<ToastContainer/>
+
+<ReactQueryDevtools initialIsOpen={false}  />
+</QueryClientProvider>
+</UserDetailContext.Provider>
+  )
+}
+
+export default App
+
