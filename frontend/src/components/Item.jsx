@@ -39,19 +39,19 @@ const Item = ({ property }) => {
         <div className='flex gap-x-2 py-2'>
           <div className='flexCenter gap-x-2 border-r border-slate-900/50 pr-4 font-[500]' >
             <MdOutlineBed />
-            {property.facilities.bedrooms}
+            {property?.facilities?.[0]?.bedrooms}
           </div>
            
            
            <div className='flexCenter gap-x-2 border-r border-slate-900/50 pr-4 font-[500]' >
             <MdOutlineBathtub />
-            {property.facilities.bathrooms}
+            {property?.facilities?.[0]?.bathrooms}
           </div>
            
            
            <div className='flexCenter gap-x-2 border-r border-slate-900/50 pr-4 font-[500]' >
             <MdOutlineGarage />
-            {property.facilities.parkings}
+            {property?.facilities?.[0]?.parkings}
           </div>
 
          <div className='flexCenter gap-x-2 border-r border-slate-900/50 pr-4 font-[500]' >

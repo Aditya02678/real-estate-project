@@ -225,3 +225,32 @@ export const getAllBookings =async (email,token)=> {
     }
 
 }
+
+
+export const createResidency = async (data,token,userEmail)=>{
+    //Ensure userEmail is included in the data object
+
+
+    const requestData ={...data,userEmail};
+    console.log(requestData) // load the updated data object
+ 
+   try{
+
+        const res=await api.post(`/residency/create`,
+             requestData, //pass the updated data object as the request
+            {
+
+
+
+                headers:{
+                    Authorization:`Bearer ${token}`,
+
+                }
+            }
+        )
+
+    }catch(e) {
+  
+        throw e
+    }
+}

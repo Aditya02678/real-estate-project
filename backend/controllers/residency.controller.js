@@ -6,7 +6,7 @@ import {prisma} from "../config/prisma.config.js"
 export const createResidency = asyncHandler(async(req,res)=>{
  
 
-    const {title,description,price,address, city,facilities,image,userEmail}=req.body.data;
+    const {title,description,price,address, city,facilities,image,userEmail}=req.body.data || req.body;
 
     console.log(req.body.data)
 

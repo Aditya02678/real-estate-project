@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import AddLocation from './AddLocation'
 import { useAuth0 } from '@auth0/auth0-react'
 import UploadImage from './UploadImage'
+import BasicDetails from './BasicDetails'
+import Facilities from './Facilities'
 
 const AddPropertyModal = ({opened ,setOpened}) => {
 
@@ -40,7 +42,7 @@ const AddPropertyModal = ({opened ,setOpened}) => {
     
     const prevStep = () => {
         
-        setActive((current)=>(current < 0 ? current-1 :current) )
+        setActive((current)=>(current > 0 ? current-1 :current) )
 
     }
   return (
@@ -55,14 +57,14 @@ const AddPropertyModal = ({opened ,setOpened}) => {
         <>
         
        <Stepper active={active} onStepClick={setActive}>
-        <Stepper.Step label="First step" description="Add Location">
+        <Stepper.Step label="Location" description="Address">
           <AddLocation 
           nextStep ={ nextStep}
           propertyDetails={propertyDetails}
           setPropertyDetails={setPropertyDetails}
           />
         </Stepper.Step>
-        <Stepper.Step label="Second step" description="Upload Image">
+        <Stepper.Step label="Image" description="Upload">
        
          <UploadImage
           prevStep={prevStep} 
@@ -71,9 +73,33 @@ const AddPropertyModal = ({opened ,setOpened}) => {
           setPropertyDetails={setPropertyDetails}
           />
         </Stepper.Step>
-        <Stepper.Step label="Final step" description="Get full access">
-          Step 3 content: Get full access
+        <Stepper.Step label="Basics" description="Details">
+          <BasicDetails 
+          
+           prevStep={prevStep} 
+          nextStep ={ nextStep}
+          propertyDetails={propertyDetails}
+          setPropertyDetails={setPropertyDetails}
+          
+          
+          
+          />
         </Stepper.Step>
+
+<Stepper.Step >
+          <Facilities 
+          
+           prevStep={prevStep} 
+          propertyDetails={propertyDetails}
+          setPropertyDetails={setPropertyDetails}
+          setOpened ={setOpened}
+          setActiveStep={setActive}
+          
+          
+          
+          />
+        </Stepper.Step>
+
         <Stepper.Completed>
           Completed, click back button to get to previous step
         </Stepper.Completed>
@@ -85,7 +111,6 @@ const AddPropertyModal = ({opened ,setOpened}) => {
     </Container>
   
 
-  Add property modal
 
 
 

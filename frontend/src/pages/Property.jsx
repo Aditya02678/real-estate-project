@@ -13,7 +13,7 @@ import BookingModal from '../components/BookingModal';
 import UserDetailContext from '../context/UserDetailContext';
 import { Button } from '@mantine/core';
 import HeartBtn from '../components/HeartBtn';
- 
+ import { toast } from 'react-toastify'  // ✅ add this
 
 const Property = () => {
   const[modalOpened, setModalOpened] =useState(false)
