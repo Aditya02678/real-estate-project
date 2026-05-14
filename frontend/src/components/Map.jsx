@@ -9,8 +9,8 @@ const Map = ({address,city}) => {
 <MapContainer
  
 
- center={[53.35,18.8]}
-zoom={1}
+ center={[20.5937,78.9629]}
+zoom={4}
 scrollWheelZoom={false}
 className='h-[24rem] w-full mt-5 z-0'
 >
