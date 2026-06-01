@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "postinstall": "chmod +x node_modules/.bin/prisma && prisma generate"
+    "postinstall": "chmod +x node_modules/.bin/prisma && prisma generate" 
   },
   "dependencies": {
     "@prisma/client": "^6.19.2",
