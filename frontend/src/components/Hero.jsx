@@ -9,7 +9,7 @@ import client6 from '../assets/client6 copy.jpg';
 import bg from '../assets/bg.png';
 import { FaStar } from 'react-icons/fa6';
 
-const hero = () => {
+const Hero = () => {
   return (
     <section
       className="mx-auto max-w-[1440px] px-6 lg:px-12 pl-8 bg-cover bg-no-repeat h-[722px] w-full  "
@@ -78,4 +78,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Hero from '../components/hero'
+import Hero from "../components/Hero"
 import Feature from '../components/feature'
 import  Achievements  from "../components/Achievements";
 import Properties from '../components/Properties'
