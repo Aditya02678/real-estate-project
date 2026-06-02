@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Hero from "../components/Hero"
-import Feature from '../components/feature'
+import Feature from '../components/Feature'
 import  Achievements  from "../components/Achievements";
 import Properties from '../components/Properties'
-import About from '../components/about'
+import About from '../components/About'
 import Testimonials from '../components/testimonials'
 
 const Home = () => {

@@ -4,7 +4,7 @@ import {AiOutlineSearch} from "react-icons/ai"
 import {IoBookmarksOutline,IoTicketOutline} from "react-icons/io5"
 import {RiFileList3Line} from "react-icons/ri"
 
-const feature = () => {
+const Feature = () => {
   return (
     <section className='mx-auto max-w-[1440px] px-6 lg:px-12 py-18 bg-white'>
 
@@ -61,4 +61,4 @@ const feature = () => {
   )
 }
 
-export default feature
+export default Feature
