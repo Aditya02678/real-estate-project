@@ -5,7 +5,7 @@ import Feature from '../components/Feature'
 import  Achievements  from "../components/Achievements";
 import Properties from '../components/Properties'
 import About from '../components/About'
-import Testimonials from '../components/testimonials'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   return (
